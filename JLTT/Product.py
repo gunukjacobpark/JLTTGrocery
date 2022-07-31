@@ -35,4 +35,3 @@ class Product:
 
     def getDescription(self):
         return self.description
-
