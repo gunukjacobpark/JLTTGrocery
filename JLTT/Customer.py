@@ -1,4 +1,4 @@
-from ShopingCart import ShoppingCart
+from ShoppingCart import ShoppingCart
 
 
 class Customer:

@@ -4,7 +4,7 @@ import psycopg2
 
 from Customer import Customer
 from Product import Product
-from ShopingCart import ShoppingCart
+from ShoppingCart import ShoppingCart
 
 
 class DBHandler:
