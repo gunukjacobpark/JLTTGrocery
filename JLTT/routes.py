@@ -12,11 +12,18 @@ def home():
 def shop():
 	return render_template('shop.html')
 
-@app.route("", methods=['GET', 'POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
 	#user authentication 
 	return render_template()
 
-@app.route("", methods=['GET', 'POST'])
+
+@app.route("/logout", methods=['GET', 'POST'])
 def logout():
 	return render_template()
+
+
+@app.route('/shoppingcart')
+def shoppingcart():
+	return render_template('shoppingcart.html')
+
