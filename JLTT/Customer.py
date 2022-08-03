@@ -8,26 +8,38 @@ class Customer:
         self.address = ""
         self.phone = ""
         self.email = ""
-        self.shoppingCart = ShoppingCart()
+        self.shoppingCart = None
 
-    def setAddress(self, newAddress):
-        self.address = newAddress
+    def getId(self):
+        return self.id
+
+    def setName(self, name):
+        self.name = name
+
+    def getName(self):
+        return self.name
+
+    def setAddress(self, address):
+        self.address = address
 
     def getAddress(self):
         return self.address
 
-    def setPhone(self):
+    def setPhone(self, phone):
+        self.phone = phone
 
     def getPhone(self):
+        return self.phone
 
-    def setEmail(self):
+    def setEmail(self, email):
+        self.email = email
 
     def getEmail(self):
+        return self.email
+
+    def setShoppingCart(self, shoppingCart):
+        self.shoppingCart = shoppingCart
 
     def getShoppingCart(self):
         return self.shoppingCart
-
-
-
-
 
