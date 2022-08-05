@@ -12,6 +12,9 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 <!-- header section starts  -->
@@ -23,16 +26,14 @@
     <nav class="navbar">
         <a href="{{ url_for('home') }}">home</a>
         <a href="{{ url_for('shop') }}">shop</a>
-        <a href="about.html">about</a>
-        <a href="review.html">review</a>
-        <a href="contact.html">contact</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Registration</a>
     </nav>
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
         <div id="cart-btn" class="fas fa-shopping-cart"></div>
-        <div id="login-btn" class="fas fa-user"></div>
     </div>
 
     <form action="" class="search-form">
@@ -43,7 +44,17 @@
     <div class="shopping-cart">
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-1.jpg" alt="">
+            <img src="static/img/cart-1.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="static/img/cart-2.jpg" alt="">
             <div class="content">
                 <h3>organic food</h3>
                 <span class="quantity">1</span>
@@ -53,17 +64,7 @@
         </div>
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-2.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-3.jpg" alt="">
+            <img src="static/img/cart-3.jpg" alt="">
             <div class="content">
                 <h3>organic food</h3>
                 <span class="quantity">1</span>
@@ -75,7 +76,7 @@
         <a href="#" class="btn">checkout cart</a>
     </div>
 
-    <form action="" class="login-form">
+    <form method="POST" class="login-form">
         <h3>login form</h3>
         <input type="email" placeholder="enter your email" class="box">
         <input type="password" placeholder="enter your password" class="box">
@@ -85,21 +86,20 @@
         </div>
         <input type="submit" value="login now" class="btn">
         <p>forget password? <a href="#">click here</a></p>
-        <p>don't have an account? <a href="#">create one</a></p>
+        <p>don't have an account? <a href="{{ url_for('register') }}">create one</a></p>
     </form>
-
 </header>
 
 <!-- header section ends -->
 
 <!-- block content start -->
 
-{% block content %} {% endblock %}
+{% block content %}{% endblock %}
 
 <!-- block content ends -->
 
 <!-- footer section starts  -->
-
+<!--
 <section class="footer">
 
     <div class="box-container">
@@ -108,10 +108,10 @@
             <h3>quick links</h3>
             <a href="home.html"> <i class="fas fa-arrow-right"></i> home</a>
             <a href="shop.html"> <i class="fas fa-arrow-right"></i> shop</a>
-            <a href="about.html"> <i class="fas fa-arrow-right"></i> about</a>
-            <a href="review.html"> <i class="fas fa-arrow-right"></i> review</a>
-            <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog</a>
-            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact</a>
+            <a href="home.html"> <i class="fas fa-arrow-right"></i> about</a>
+            <a href="rhome.html"> <i class="fas fa-arrow-right"></i> review</a>
+            <a href="home.html"> <i class="fas fa-arrow-right"></i> blog</a>
+            <a href="home.html"> <i class="fas fa-arrow-right"></i> contact</a>
         </div>
 
         <div class="box">
@@ -146,15 +146,20 @@
 
 </section>
 
+
 <section class="credit">created by <a href=""> Jacob, Trevon, Tae & Lily </a> | Enjoy!</section>
-
+-->
 <!-- footer section ends -->
-
 
 
 <!-- custom css file link  -->
 <script src="static/script.js"></script>
 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
